@@ -1,7 +1,20 @@
 import type { Metadata } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
 import { siteData } from "@/lib/data";
 import Starfield from "@/components/ui/Starfield";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: `${siteData.meta.title} | ${siteData.meta.author}`,
@@ -9,11 +22,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteData.meta.title,
     description: siteData.hero.body,
-    url: "https://chandrashekarbabu.com", // Assuming this is the real domain
+    url: "https://chandrashekarbabu.com",
     siteName: siteData.meta.title,
     images: [
       {
-        url: "/og-image.jpg", // We will recommend they add this image
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
       },
@@ -35,8 +48,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`font-sans antialiased text-text-primary bg-transparent min-h-screen`}>
+    <html lang="en" className={`scroll-smooth ${inter.variable} ${playfair.variable}`}>
+      <body className="font-sans antialiased text-text-primary bg-transparent min-h-screen">
         <Starfield />
         {children}
       </body>

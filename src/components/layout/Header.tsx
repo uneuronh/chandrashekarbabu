@@ -19,23 +19,26 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navLinks = siteData.nav.filter((item) => item.label !== "Buy");
+
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "glass-panel py-4" : "bg-transparent py-6"
+        isScrolled ? "glass-panel py-3" : "bg-transparent py-5"
       )}
     >
       <div className="container mx-auto px-6 max-w-7xl flex items-center justify-between">
-        {/* Logo / Author Name */}
-        <a href="#" className="text-xl font-serif text-white tracking-widest uppercase hover:opacity-80 transition-opacity">
+        <a
+          href="#"
+          className="text-lg font-serif text-white tracking-[0.25em] uppercase hover:opacity-80 transition-opacity"
+        >
           {siteData.meta.author}
         </a>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-8">
-          <ul className="flex space-x-8 text-sm font-sans tracking-wide">
-            {siteData.nav.map((item) => (
+        <nav className="hidden md:flex items-center gap-8">
+          <ul className="flex gap-8 text-sm font-sans tracking-wide">
+            {navLinks.map((item) => (
               <li key={item.label}>
                 <a
                   href={item.href}
@@ -45,13 +48,20 @@ export function Header() {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href="#buy"
+                className="text-text-secondary hover:text-white transition-colors"
+              >
+                Buy
+              </a>
+            </li>
           </ul>
-          <Button href="#buy" variant="primary" className="px-5 py-2">
+          <Button href="#buy" variant="primary" className="px-5 py-2 text-sm">
             Buy the Book
           </Button>
         </nav>
 
-        {/* Mobile Toggle */}
         <button
           className="md:hidden text-white p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -60,7 +70,6 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile Nav Slide-over */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div

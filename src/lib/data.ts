@@ -1,7 +1,7 @@
 export const siteData = {
   meta: {
     title: "The Turing Threshold",
-    subtitle: "Evolution’s Point of No Return",
+    subtitle: "Evolution's Point of No Return",
     author: "Chandrashekar Babu",
   },
   nav: [
@@ -9,10 +9,11 @@ export const siteData = {
     { label: "Snippets", href: "#snippets" },
     { label: "Reviews", href: "#reviews" },
     { label: "About Author", href: "#author" },
+    { label: "Buy", href: "#buy" },
   ],
   hero: {
     title: "The Turing Threshold",
-    subtitle: "Evolution’s Point of No Return",
+    subtitle: "Evolution's Point of No Return",
     body: "Artificial intelligence did not arrive by accident. It is the consequence of a long evolutionary process now approaching a threshold where intelligence itself becomes a selectable, non-biological substrate.",
     primaryCta: "Buy Now",
     primaryLink: "#buy",
@@ -20,36 +21,20 @@ export const siteData = {
     secondaryLink: "#snippets",
   },
   retailers: [
-    { name: "Notion Press", url: "#", logo: "notionpress" },
-    { name: "Amazon", url: "#", logo: "amazon" },
-    { name: "Flipkart", url: "#", logo: "flipkart" },
-    { name: "Audible", url: "#", logo: "audible" },
-    { name: "Storytel", url: "#", logo: "storytel" },
-    { name: "Spotify", url: "#", logo: "spotify" },
+    { name: "Notionpress", url: "#", icon: "N" },
+    { name: "amazon", url: "#", icon: "" },
+    { name: "Flipkart", url: "#", icon: "" },
+    { name: "audible", url: "#", icon: "" },
+    { name: "storytel", url: "#", icon: "" },
+    { name: "Spotify", url: "#", icon: "" },
   ],
   aboutBook: {
     title: "About the Book",
-    content: "The Turing Threshold examines intelligence not as an isolated invention, but as the consequence of long evolutionary continuity. It explores how cognition moved outward across tools, systems, language, institutions, and machines until intelligence itself became substrate-agnostic and recursively optimizable.",
+    quote: "We are not the beginning of intelligence—we are merely the current substrate it has occupied and expanded beyond.",
   },
-  comparison: {
-    whatItIs: {
-      title: "What It Is",
-      items: [
-        "A systems-level analysis of intelligence",
-        "A study of constraint, selection, and irreversibility",
-        "A mapping of long-range trajectories",
-        "A serious exploration of non-biological cognition",
-      ],
-    },
-    whatIsNot: {
-      title: "What It Is Not",
-      items: [
-        "Not hype",
-        "Not a manifesto",
-        "Not moral futurism",
-        "Not simplistic AI optimism or doomism",
-      ],
-    },
+  whatItIs: {
+    title: "What It Is",
+    items: ["Hype", "Manifesto", "Manifesto", "Moral futurism"],
   },
   snippets: {
     title: "Featured Snippets",
@@ -82,13 +67,9 @@ export const siteData = {
   author: {
     title: "About the Author",
     name: "Chandrashekar Babu",
-    image: "/images/author/chandrashekar-babu.jpg",
-    bio: "Chandrashekar Babu works at the intersection of systems engineering, open-source software, and long-arc evolutionary thinking. His work explores intelligence, coordination, continuity, and the structural thresholds that shape civilization-scale change.",
-    credibility: [
-      "Systems Engineering & Open Source",
-      "Teacher, Thinker, and Independent Technologist",
-      "Founder / Builder / Instructor",
-    ],
+    image: "/images/author/chandrashekar-babu.png",
+    bio: "Chandrashekar Babu works at the intersection of systems engineering, open-source software, and long-arc evolutionary thinking. His work continued thresholds, coordination, cognition, and the structures that persist.",
+    credentials: "Slashpng Founder & Instructor",
   },
   finalCta: {
     title: "Enter the Threshold.",
