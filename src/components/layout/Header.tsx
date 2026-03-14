@@ -92,7 +92,7 @@ export function Header() {
               ))}
               <li className="pt-4">
                 <Button href="#buy" variant="primary" className="w-full">
-                  Buy the Book
+                  Buy the Book Now!
                 </Button>
               </li>
             </ul>
